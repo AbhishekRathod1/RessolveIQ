@@ -1,0 +1,84 @@
+{
+  "evaluation_type": "synthetic-data performance",
+  "random_seed": 20261113,
+  "dataset_path": "data/sample_tickets/fictional_classification_tickets.csv",
+  "dataset_rows": 108,
+  "split_protocol": "First fold from StratifiedGroupKFold(n_splits=4, shuffle=True, random_state=20261113); all variants of each scenario_group stay in one split.",
+  "train_rows": 81,
+  "test_rows": 27,
+  "near_duplicate_check": {
+    "method": "Normalized-character SequenceMatcher ratio",
+    "threshold": 0.88,
+    "maximum_cross_split_similarity": 0.7344,
+    "exact_duplicates": 0,
+    "near_duplicates_over_threshold": 0
+  },
+  "accuracy": 1.0,
+  "macro_f1": 1.0,
+  "labels": [
+    "Hardware",
+    "Software",
+    "Network",
+    "Account & Access",
+    "Security",
+    "Other"
+  ],
+  "confusion_matrix": [
+    [
+      6,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      3,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      6,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      3,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      3,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      6
+    ]
+  ],
+  "per_class_support": {
+    "Hardware": 6,
+    "Software": 3,
+    "Network": 6,
+    "Account & Access": 3,
+    "Security": 3,
+    "Other": 6
+  }
+}

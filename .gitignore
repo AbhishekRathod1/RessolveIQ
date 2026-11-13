@@ -13,6 +13,8 @@ htmlcov/
 *.db
 *.sqlite
 *.sqlite3
+*.joblib
+backend/app/ai/artifacts/
 
 # Editors and operating systems
 .vscode/

@@ -1,0 +1,57 @@
+[
+  {
+    "ticket_number": "RIQ-DEMO-001",
+    "title": "Fictional laptop cannot connect to office Wi-Fi",
+    "description": "A sample employee reports that a demo laptop disconnects from the fictional office wireless network.",
+    "category": "network",
+    "priority": "high",
+    "assigned_team": "Network Support",
+    "status": "in_progress",
+    "requester_name": "Jordan Example",
+    "requester_email": "jordan@example.com"
+  },
+  {
+    "ticket_number": "RIQ-DEMO-002",
+    "title": "Fictional request for shared drive access",
+    "description": "A sample employee needs access to a fictional project folder for a training exercise.",
+    "category": "access",
+    "priority": "medium",
+    "assigned_team": "Identity Support",
+    "status": "open",
+    "requester_name": "Taylor Sample",
+    "requester_email": "taylor@example.com"
+  },
+  {
+    "ticket_number": "RIQ-DEMO-003",
+    "title": "Fictional spreadsheet application startup issue",
+    "description": "A sample workstation displays a fictional error when opening the training spreadsheet application.",
+    "category": "software",
+    "priority": "low",
+    "assigned_team": "Desktop Support",
+    "status": "pending_review",
+    "requester_name": "Morgan Fiction",
+    "requester_email": "morgan@example.com"
+  },
+  {
+    "ticket_number": "RIQ-DEMO-004",
+    "title": "Fictional monitor power issue resolved",
+    "description": "A sample employee reported a monitor power issue that was resolved by reconnecting its demo power cable.",
+    "category": "hardware",
+    "priority": "low",
+    "assigned_team": "Desktop Support",
+    "status": "resolved",
+    "requester_name": "Casey Example",
+    "requester_email": "casey@example.com"
+  },
+  {
+    "ticket_number": "RIQ-DEMO-005",
+    "title": "Fictional account lockout requiring escalation",
+    "description": "A sample account remains locked after the fictional self-service recovery steps and is escalated for review.",
+    "category": "security",
+    "priority": "urgent",
+    "assigned_team": "Identity Support",
+    "status": "escalated",
+    "requester_name": "Riley Sample",
+    "requester_email": "riley@example.com"
+  }
+]

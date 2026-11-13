@@ -2,5 +2,8 @@ fastapi
 uvicorn
 sqlalchemy
 pydantic-settings
+email-validator
+pandas
+scikit-learn
 pytest
 httpx
