@@ -182,4 +182,4 @@ npm run build
 
 ## License
 
-No `LICENSE` file is currently included. Do not infer open-source reuse rights until the repository owner selects and adds a license.
+This project is licensed under the [MIT License](LICENSE).
