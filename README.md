@@ -19,6 +19,21 @@ The health endpoint is available at <http://127.0.0.1:8000/api/health>. Interact
 
 The classifier artifact is generated locally by the training command and is excluded from Git. The analyzer returns `503` until the model has been trained. Training is not performed by API requests.
 
+## Frontend quick start
+
+Start the backend in one terminal as above. In a second PowerShell terminal from the repository root:
+
+```powershell
+Set-Location frontend
+npm install
+Copy-Item .env.example .env.local
+npm run dev
+```
+
+Open <http://localhost:5173>. `VITE_API_BASE_URL` configures the API base URL (default: `http://127.0.0.1:8000/api`). The frontend includes the live dashboard, searchable and filterable ticket queue, ticket creation with opt-in AI preview, ticket review/escalation workflow, knowledge search, and analytics. Metrics and ticket data come from the backend; the frontend does not contain sample metric fixtures. AI suggestions are labeled as demo recommendations and remain subject to human review.
+
+Validate the frontend with `npm run lint` and `npm run build` from `frontend\`.
+
 ## Ticket API
 
 - `POST /api/tickets` creates a ticket with server-generated ID, ticket number, timestamps, and initial `open` status.

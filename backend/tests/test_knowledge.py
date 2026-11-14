@@ -159,9 +159,8 @@ def test_unrelated_suggestion_uses_safe_insufficient_evidence_fallback(
 def test_missing_documents_return_empty_catalog_and_insufficient_evidence(
     client: TestClient, monkeypatch: pytest.MonkeyPatch, tmp_path: Path
 ) -> None:
-    empty_directory = tmp_path / "empty-kb"
-    empty_directory.mkdir()
-    monkeypatch.setattr(knowledge_service, "KNOWLEDGE_BASE_DIR", empty_directory)
+    missing_directory = tmp_path / "missing-kb"
+    monkeypatch.setattr(knowledge_service, "KNOWLEDGE_BASE_DIR", missing_directory)
     knowledge_service.get_knowledge_index.cache_clear()
 
     catalog = client.get("/api/knowledge")

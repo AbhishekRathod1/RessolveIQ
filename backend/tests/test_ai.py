@@ -233,3 +233,4 @@ def test_missing_model_returns_actionable_service_unavailable(
 
     assert response.status_code == 503
     assert "train_ticket_classifier.py" in response.json()["detail"]
+    assert str(tmp_path) not in response.json()["detail"]

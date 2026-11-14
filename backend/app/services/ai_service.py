@@ -74,7 +74,10 @@ def analyze_ticket(data: TicketAnalysisRequest) -> TicketAnalysisResponse:
     except FileNotFoundError as error:
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
-            detail=str(error),
+            detail=(
+                "Ticket classification model is unavailable. "
+                "Run `python scripts/train_ticket_classifier.py` first."
+            ),
         ) from error
 
     text = f"{data.title}\n{data.description}"
