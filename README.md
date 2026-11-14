@@ -156,6 +156,7 @@ Twenty fictional Markdown articles are chunked deterministically and indexed wit
 - [Architecture](docs/ARCHITECTURE.md) — system diagram, components, and data flows.
 - [Integration report](docs/INTEGRATION_REPORT.md) — manually verified browser/API flows.
 - [Quality report](docs/QUALITY_REPORT.md) — tests, audit findings, limitations, and production gaps.
+- [Final portfolio QA report](docs/FINAL_REPORT.md) — acceptance checklist, current verification, launch commands, and demo/presentation material.
 
 ## Tests
 
