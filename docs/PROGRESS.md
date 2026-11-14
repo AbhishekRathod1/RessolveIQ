@@ -72,6 +72,15 @@
 - Verified empty/loading/error UI behavior, offline retry, navigation, actual ticket creation/classification, and live analytics in the browser. Recorded a small warm local benchmark and its limitations.
 - Full outcomes, production gaps, evaluation protocol, and remaining blockers are documented in [docs/QUALITY_REPORT.md](./QUALITY_REPORT.md).
 
+## Milestone 9: Public portfolio documentation
+
+- Rewrote the root README with the problem/use case, implemented features, architecture, stack, Windows PowerShell setup and run instructions, environment configuration, seed-data steps, AI approach and measured synthetic evaluation, limitations, and license status.
+- Added architecture, API reference, demo walkthrough, and interview Q&A documentation with Mermaid diagrams where useful.
+- Captured a genuine dashboard screenshot from the local application using five fictional seeded tickets; no screenshot or benchmark results were fabricated.
+- Updated `.gitignore` to ignore `.env.*` while retaining the checked-in `.env.example` templates. Verified the preview database and environment files are ignored.
+- Confirmed documented training/seeding scripts and environment-template paths exist; verified API and Vite startup for the screenshot and checked all local Markdown links.
+- Verification: all 76 backend tests pass with one existing Starlette/httpx deprecation warning; frontend lint and production build pass; `git diff --check` passes.
+
 ## Deferred
 
 - Advanced workflow automation.

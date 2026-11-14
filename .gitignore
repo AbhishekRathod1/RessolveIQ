@@ -10,6 +10,8 @@ htmlcov/
 
 # Environment and local database
 .env
+.env.*
+!.env.example
 *.db
 *.sqlite
 *.sqlite3
