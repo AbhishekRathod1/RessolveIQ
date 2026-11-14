@@ -179,17 +179,6 @@ npm run lint
 npm run build
 ```
 
-## Limitations and future improvements
 
-- No authentication or role-based authorization; demo actor/reviewer labels are attribution only.
-- Synthetic data only; validate with representative, authorized, privacy-reviewed data before drawing operational conclusions.
-- SQLite and `create_all` are suitable for this local MVP, not a substitute for production migrations, backup, or concurrency planning.
-- No request rate limiting, production monitoring, alerting, or formal data retention controls.
-- The frontend and backend have no automated browser end-to-end suite; integration flows were manually exercised.
-- Potential next steps: authentication/RBAC, database migrations and a production database, secure deployment controls, automated E2E tests, and a documented evaluation/calibration process.
-
-This repository is a portfolio demonstration and is **not production-ready**.
-
-## License
 
 No `LICENSE` file is currently included. Do not infer open-source reuse rights until the repository owner selects and adds a license.
