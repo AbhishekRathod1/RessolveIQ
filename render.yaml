@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: resolveiq-abhis-demo-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt && python scripts/train_ticket_classifier.py
+    startCommand: python scripts/seed_tickets.py && uvicorn app.main:app --app-dir backend --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.10
+      - key: DATABASE_URL
+        value: sqlite:///./resolveiq.db
+      - key: CORS_ORIGINS
+        sync: false

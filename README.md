@@ -157,6 +157,8 @@ Twenty fictional Markdown articles are chunked deterministically and indexed wit
 - [Integration report](docs/INTEGRATION_REPORT.md) — manually verified browser/API flows.
 - [Quality report](docs/QUALITY_REPORT.md) — tests, audit findings, limitations, and production gaps.
 - [Final portfolio QA report](docs/FINAL_REPORT.md) — acceptance checklist, current verification, launch commands, and demo/presentation material.
+- [Project audit](docs/PROJECT_AUDIT.md) — independent source review, fresh checks, and prioritized findings.
+- [Free demo deployment](docs/DEPLOYMENT.md) — Render API and Vercel frontend setup for a public portfolio link.
 
 ## Tests
 
