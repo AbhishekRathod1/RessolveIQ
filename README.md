@@ -2,7 +2,7 @@
 
 **AI-assisted IT support ticketing with human-controlled resolutions.**
 
-ResolveIQ is a portfolio MVP that demonstrates how an IT support team can capture requests, triage them consistently, find relevant troubleshooting guidance, and keep a human in control of resolution decisions. It is an educational demo, not a production-ready service.
+ResolveIQ is an educational portfolio project demonstrating how an IT support team can capture requests, triage them consistently, find relevant troubleshooting guidance, and keep a human in control of resolution decisions.
 
 ## Live demo
 
@@ -10,7 +10,7 @@ ResolveIQ is a portfolio MVP that demonstrates how an IT support team can captur
 - **API health:** [https://resolveiq-abhis-demo-api.onrender.com/api/health](https://resolveiq-abhis-demo-api.onrender.com/api/health)
 - **Source code:** [GitHub repository](https://github.com/AbhishekRathod1/RessolveIQ)
 
-The frontend is hosted on Vercel and the API on Render's free tier. The API may take about a minute to wake after inactivity, and its SQLite data can reset when the service restarts or spins down. The public API has no authentication or rate limiting; use fictional demo data only. See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) before sharing the demo.
+The frontend is hosted on Vercel and the API on Render's free tier. **Security notice:** The public demo has no authentication or rate limiting; enter fictional data only. The API may take about a minute to wake after inactivity, and its SQLite data can reset when the service restarts or spins down. See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for details.
 
 ## The problem and business use case
 
@@ -151,7 +151,7 @@ The frontend reads `VITE_API_BASE_URL` from `frontend\.env.local`; the default i
 
 The local model is a scikit-learn pipeline: word-level TF-IDF with unigrams/bigrams followed by Logistic Regression. It returns one of Hardware, Software, Network, Account & Access, Security, or Other. A deterministic category-to-team map and substring-based impact rules provide separate recommendations; priority is not a trained prediction. The classifier's probability is not calibrated and low confidence requests manual review.
 
-The checked-in dataset has 108 generated fictional records. The documented evaluation is accuracy **1.0000** and macro F1 **1.0000** on 27 held-out synthetic examples (81 training examples), using a grouped split and a cross-split near-duplicate check. These results describe only this generated dataset; they are not real-world performance claims. See [docs/AI_CLASSIFICATION.md](docs/AI_CLASSIFICATION.md) and [docs/AI_CLASSIFICATION_EVALUATION.json](docs/AI_CLASSIFICATION_EVALUATION.json) for the full protocol and confusion matrix.
+The checked-in dataset has 108 generated fictional records. On a held-out synthetic-data evaluation (81 training examples, 27 test examples), the documented accuracy is **1.0000** and macro F1 is **1.0000**. The grouped split includes a cross-split near-duplicate check; these metrics describe synthetic-data performance only and are not a measure of real-world accuracy. See [docs/AI_CLASSIFICATION.md](docs/AI_CLASSIFICATION.md) and [docs/AI_CLASSIFICATION_EVALUATION.json](docs/AI_CLASSIFICATION_EVALUATION.json) for the full protocol and confusion matrix.
 
 ### Knowledge retrieval and suggestions
 
@@ -181,14 +181,11 @@ npm run build
 
 ## Limitations and future improvements
 
-- No authentication or role-based authorization; demo actor/reviewer labels are attribution only.
 - Synthetic data only; validate with representative, authorized, privacy-reviewed data before drawing operational conclusions.
-- SQLite and `create_all` are suitable for this local MVP, not a substitute for production migrations, backup, or concurrency planning.
-- No request rate limiting, production monitoring, alerting, or formal data retention controls.
+- SQLite and `create_all` are used; database migrations, backups, and concurrency controls are not configured.
+- Monitoring, alerting, and formal data-retention controls are not configured.
 - The frontend and backend have no automated browser end-to-end suite; integration flows were manually exercised.
 - Potential next steps: authentication/RBAC, database migrations and a production database, secure deployment controls, automated E2E tests, and a documented evaluation/calibration process.
-
-This repository is a portfolio demonstration and is **not production-ready**.
 
 ## License
 
