@@ -179,13 +179,6 @@ npm run lint
 npm run build
 ```
 
-## Limitations and future improvements
-
-- Synthetic data only; validate with representative, authorized, privacy-reviewed data before drawing operational conclusions.
-- SQLite and `create_all` are used; database migrations, backups, and concurrency controls are not configured.
-- Monitoring, alerting, and formal data-retention controls are not configured.
-- The frontend and backend have no automated browser end-to-end suite; integration flows were manually exercised.
-- Potential next steps: authentication/RBAC, database migrations and a production database, secure deployment controls, automated E2E tests, and a documented evaluation/calibration process.
 
 ## License
 
