@@ -4,6 +4,14 @@
 
 ResolveIQ is a portfolio MVP that demonstrates how an IT support team can capture requests, triage them consistently, find relevant troubleshooting guidance, and keep a human in control of resolution decisions. It is an educational demo, not a production-ready service.
 
+## Live demo
+
+- **Application:** [https://ressolve-iq.vercel.app](https://ressolve-iq.vercel.app)
+- **API health:** [https://resolveiq-abhis-demo-api.onrender.com/api/health](https://resolveiq-abhis-demo-api.onrender.com/api/health)
+- **Source code:** [GitHub repository](https://github.com/AbhishekRathod1/RessolveIQ)
+
+The frontend is hosted on Vercel and the API on Render's free tier. The API may take about a minute to wake after inactivity, and its SQLite data can reset when the service restarts or spins down. The public API has no authentication or rate limiting; use fictional demo data only. See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) before sharing the demo.
+
 ## The problem and business use case
 
 Enterprise help desks receive requests through multiple channels, often with incomplete details and inconsistent prioritization. A support engineer needs to classify and route each request, search internal runbooks, document decisions, and maintain an auditable ticket lifecycle.
